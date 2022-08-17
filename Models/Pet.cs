@@ -5,10 +5,25 @@ using System;
 
 namespace pet_hotel
 {
-    public enum PetBreedType {}
+    public enum PetBreedType {
+        Shepherd,
+        Poodle,
+        Beagle,
+        Bulldog,
+        Terrier,
+        Boxer,
+        Labrador,
+        Retriever,
+    }
 
     
-    public enum PetColorType {}
+    public enum PetColorType {
+        White,
+        Black,
+        Golden,
+        Tricolor,
+        Spotted,
+    }
     public class Pet {
         public int Id {get; set;}
         [Required]
@@ -19,7 +34,7 @@ namespace pet_hotel
         [Required]
         public PetColorType color {get; set;}
         public DateTime checkedInAt {get;set;}
-        
+
         [Required]
         public int petOwnerid {get;set;}
     }
